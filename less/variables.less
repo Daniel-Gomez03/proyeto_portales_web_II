@@ -1,13 +1,79 @@
-@primary-color: #1f67a8;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
+// Colors
+@primary-color: #1f67a8;    // Azul utilizado en encabezados, botones, enlaces
+@secondary-color: #e5222a;   // Rojo utilizado para alertas, notificaciones, texto importante
+@accent-color: #ee743b;      // Naranja utilizado para los hover, elementos llamativos
+@light-color: #efeced;       // Gris claro/blanco roto para fondos, texto sobre fondos oscuros
+@dark-color: #333;           // Gris oscuro/casi negro para texto
+@white-color: #ffffff;
+@background-light: #f9f9f9;  // Gris muy claro para fondos de formularios
+@background-gray: #f4f4f4;   // Gris claro para fondos de secciones
+@border-color: #ccc;         // Gris medio para bordes
+
+
+// Typography
+@font-family-base: 'Montserrat', Arial, sans-serif;
+@font-weight-light: 300;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+@font-size-base: 16px;
+@font-size-small: 0.875rem;    // 14px
+@font-size-medium: 1rem;       // 16px
+@font-size-large: 1.25rem;     // 20px
+@font-size-xlarge: 1.5rem;     // 24px
+@font-size-xxlarge: 2rem;      // 32px
+@font-size-xxxlarge: 2.5rem;   // 40px
+
+@line-height-base: 1.5;
+@line-height-tight: 1.2;
+@line-height-loose: 1.8;
+
+// Spacing
+@spacing-xs: 0.25rem;    // 4px
+@spacing-sm: 0.5rem;     // 8px
+@spacing-md: 1rem;       // 16px
+@spacing-lg: 1.5rem;     // 24px
+@spacing-xl: 2rem;       // 32px
+@spacing-xxl: 3rem;      // 48px
+@spacing-xxxl: 4rem;     // 64px
+
+// Breakpoints
 #breaks {
     tablet: 768px;
     desktop: 1025px;
     wide: 2300px;
-  }
-  
-  #breaks-prefix {
+}
+
+#breaks-prefix {
     tablet: md-;
     desktop: lg-;
     wide: xl-;
-  }
+}
+
+// Borders & Shadows
+@border-radius-sm: 4px;
+@border-radius-md: 8px;
+@border-radius-lg: 12px;
+@border-radius-xl: 16px;
+@border-radius-round: 50%;
+@border-radius-pill: 9999px;
+
+@box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+@box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+@box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+// Z-index 
+@z-index-base: 1;
+@z-index-dropdown: 1000;
+@z-index-sticky: 1020;
+@z-index-fixed: 1030;
+@z-index-modal: 1040;
+@z-index-popover: 1060;
+@z-index-tooltip: 1070;
+
+// Transiciones
+@transition-fast: 0.2s ease;
+@transition-base: 0.3s ease;
+@transition-slow: 0.5s ease;
