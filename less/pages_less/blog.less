@@ -1,0 +1,291 @@
+/* Estilos generales - Mobile First */
+.blog-page {
+    background-color: @light-color;
+    min-height: 100vh;
+}
+
+.hero {
+    position: relative;
+    height: 40vh;
+    min-height: 300px;
+    background-color: @primary-color;
+    overflow: hidden;
+    
+    @media (min-width: #breaks[tablet]) {
+        height: 60vh;
+        min-height: 350px;
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.8;
+    }
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: @white-color;
+    width: 100%;
+    padding: 0 @spacing-md;
+    
+    h2 {
+        font-size: @font-size-xxxlarge;
+        font-weight: @font-weight-bold;
+        margin-bottom: @spacing-md;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        
+        @media (min-width: #breaks[tablet]) {
+            font-size: @font-size-xxxlarge;
+        }
+    }
+    
+    p {
+        font-size: @font-size-large;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        
+        @media (min-width: #breaks[tablet]) {
+            font-size: @font-size-xlarge;
+        }
+    }
+}
+
+.blog-contenedor {
+    max-width: 100%;
+    margin: @spacing-xl auto 0;
+    padding: 0 @spacing-md @spacing-xxxl;
+    position: relative;
+    z-index: @z-index-base + 1;
+    
+    @media (min-width: #breaks[desktop]) {
+        max-width: 1200px;
+        padding: 0 @spacing-xl @spacing-xxxl;
+    }
+}
+
+.blog-estructura {
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-xl;
+    
+    @media (min-width: #breaks[tablet]) {
+        flex-direction: row;
+    }
+    
+    @media (min-width: #breaks[desktop]) {
+        gap: @spacing-xxl;
+    }
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-xl;
+}
+
+.blog-post {
+    background: @white-color;
+    border-radius: @border-radius-lg;
+    overflow: hidden;
+    box-shadow: @box-shadow-md;
+    transition: transform @transition-base;
+    
+    &:hover {
+        transform: translateY(-5px);
+        
+        .post-image img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.post-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform @transition-base;
+    }
+}
+
+.post-contenido {
+    padding: @spacing-lg;
+}
+
+.post-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @spacing-sm;
+    margin-bottom: @spacing-md;
+}
+
+.post-categoria {
+    color: @secondary-color;
+    font-weight: @font-weight-bold - 100;
+    font-size: @font-size-small;
+}
+
+.post-fecha {
+    color: #666;
+    font-size: @font-size-small;
+}
+
+.post-titulo {
+    color: @primary-color;
+    margin-bottom: @spacing-sm;
+    font-size: @font-size-xlarge;
+}
+
+.post-descripcion {
+    color: @dark-color;
+    line-height: @line-height-base;
+    margin-bottom: @spacing-md;
+}
+
+.blog-sidebar {
+    display: none;
+    
+    @media (min-width: #breaks[tablet]) {
+        display: flex;
+        flex-direction: column;
+        gap: @spacing-xl;
+    }
+}
+
+.sidebar-categorias {
+    @media (min-width: #breaks[tablet]) {
+        background: @white-color;
+        border-radius: @border-radius-lg;
+        padding: @spacing-lg;
+        box-shadow: @box-shadow-md;
+    }
+}
+
+.categoria-titulo {
+    @media (min-width: #breaks[tablet]) {
+        color: @primary-color;
+        font-size: @font-size-large;
+        margin-bottom: @spacing-lg;
+        padding-bottom: @spacing-sm;
+        border-bottom: 2px solid @primary-color;
+    }
+}
+
+.etiquetas {
+    @media (min-width: #breaks[tablet]) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: @spacing-sm;
+    }
+}
+
+.tag {
+    @media (min-width: #breaks[tablet]) {
+        background: #f0f2f5;
+        color: #666;
+        padding: @spacing-sm @spacing-md;
+        border-radius: @border-radius-pill;
+        text-decoration: none;
+        font-size: @font-size-small;
+        transition: all @transition-base;
+        
+        &:hover {
+            background: @primary-color;
+            color: @white-color;
+        }
+    }
+}
+
+.sidebar-entradas-recientes {
+    @media (min-width: #breaks[tablet]) {
+        background: @white-color;
+        border-radius: @border-radius-lg;
+        padding: @spacing-lg;
+        box-shadow: @box-shadow-md;
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            margin-bottom: @spacing-sm;
+            
+            a {
+                color: #666;
+                text-decoration: none;
+                font-size: @font-size-small;
+                transition: color @transition-base;
+                
+                &:hover {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+}
+
+.entradas-titulo {
+    @media (min-width: #breaks[tablet]) {
+        color: @primary-color;
+        font-size: @font-size-large;
+        margin-bottom: @spacing-lg;
+        padding-bottom: @spacing-sm;
+        border-bottom: 2px solid @primary-color;
+    }
+}
+
+.sidebar-redes-sociales {
+    @media (min-width: #breaks[tablet]) {
+        background: @white-color;
+        border-radius: @border-radius-lg;
+        padding: @spacing-lg;
+        box-shadow: @box-shadow-md;
+    }
+}
+
+.redes-titulo {
+    @media (min-width: #breaks[tablet]) {
+        color: @primary-color;
+        font-size: @font-size-large;
+        margin-bottom: @spacing-lg;
+        padding-bottom: @spacing-sm;
+        border-bottom: 2px solid @primary-color;
+    }
+}
+
+.iconos-redes {
+    @media (min-width: #breaks[tablet]) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: @spacing-sm;
+    }
+}
+
+.red-social {
+    @media (min-width: #breaks[tablet]) {
+        background: #f0f2f5;
+        color: #666;
+        padding: @spacing-sm @spacing-md;
+        border-radius: @border-radius-pill;
+        text-decoration: none;
+        font-size: @font-size-small;
+        transition: all @transition-base;
+        
+        &:hover {
+            background: @primary-color;
+            color: @white-color;
+        }
+    }
+}
