@@ -1,0 +1,413 @@
+// Contenido Principal de Sección Vuelo
+.hero-panel_Vuelo {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    @media (min-width: #breaks[tablet]) {
+        height: 60vh;
+        min-height: 350px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        @media(min-width: #breaks[desktop]){
+            object-fit: cover;
+            width: 150%;
+            height: 90vh;
+        }
+    }
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: @dark-color;
+
+        h2 {
+            font-size: 20px;
+            font-weight: @font-weight-bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+
+            @media(min-width: #breaks[tablet]){
+                font-size: @font-size-large;
+                font-weight: @font-weight-bold;
+            }
+
+            @media(min-width: #breaks[desktop]){
+                font-size: 30px;
+            }
+
+        }
+
+        p {
+            font-size: 10px;
+            font-weight: 350;
+            margin-bottom: 25px;
+            color: black;
+
+            @media(min-width: #breaks[tablet]){
+                font-size: 13px;
+                font-weight: @font-weight-normal;
+            }
+
+            @media(min-width: #breaks[desktop]){
+                font-size: 17px;
+                font-weight: @font-weight-normal;
+            }
+        }
+    }
+}
+
+.busqueda-vuelos {
+    background-color: @light-color;
+    margin-bottom: 50px;
+
+    h2 {
+        color: @primary-color;
+        margin-left: 15px;
+        font-size: 25px;
+        margin-top: 1.5px;
+    }
+
+    .container {
+        padding-inline: 15px;
+        color: @dark-color;
+        font-weight: @font-weight-bold;
+        background-color: @light-color;
+
+        .form_busquedaVuelo {
+            display: flex;
+            gap: 15px; 
+            justify-content: space-between; 
+            margin-top: 25px;
+            flex-wrap: wrap; 
+
+            .input-wrapper {
+                flex: 1 1 45%; 
+
+                .input-field {
+                    width: 100%;
+                    padding: @spacing-sm;
+                    border-radius: 25px; 
+                    border: 1px solid @border-color;
+                    font-size: @font-size-medium;
+                }
+            }
+
+            button {
+                margin-top: 3%;
+            }
+        }
+
+        .boton {
+            display: flex;
+            align-self: center;
+            padding: @spacing-md @spacing-xl;
+            background-color: @secondary-color;
+            color: @white-color;
+            text-decoration: none;
+            margin: @spacing-sm auto;
+            box-shadow: 3px 3px 5px #000;
+            border-radius: 48px;
+            font-family: @font-family-base;
+
+            &:hover {
+                background-color: @accent-color;
+            }
+        }
+
+        input:invalid, select:invalid {
+            border: 2px solid @secondary-color;
+        }
+
+        input:valid, select:valid {
+            border: 2px solid @primary-color;
+        }
+    }
+}
+
+// Sección Destinos Populares
+.destinosP {
+    padding: @spacing-sm;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+
+    .container {
+        background-color: @primary-color;
+        text-align: center;
+
+        p {
+            font-size: 18px;
+            font-weight: @font-weight-normal;
+            margin-top: 4px;
+        }
+
+        .desc {
+            color: @light-color;
+        }
+
+        h3 {
+            color: rgba(@light-color, 0.88);
+            font-weight: @font-weight-normal;
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            color: @light-color;
+            font-size: @font-size-large;
+        }
+
+        .boton {
+            display: flex;
+            align-self: center;
+            padding: @spacing-md @spacing-xl;
+            background-color: @secondary-color;
+            color: @white-color;
+            text-decoration: none;
+            margin: @spacing-sm auto;
+            box-shadow: 3px 3px 5px #000;
+            border-radius: 48px;
+            font-family: @font-family-base;
+            margin-top: 3%;
+            margin-bottom: 2%;
+
+            &:hover {
+                background-color: @accent-color;
+            }
+        }
+    }
+
+    .Lista_destinos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; 
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+        margin-top: 30px;
+
+        .popular-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            width: 300px; 
+            background-color: @white-color;
+            box-shadow: @box-shadow-md;
+
+            .card_img img {
+                width: 100%;
+                height: 180px; 
+                object-fit: cover;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            .card_content {
+                padding: 15px;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                text-align: left;
+
+                .card_rating {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 85px;
+                    height: 54px;
+                    border-radius: 15%;
+                    top: 185px;
+                    right: @spacing-md;
+                    background-color: @primary-color;
+                    transform: translateY(-50%);
+                    font-weight: @font-weight-bold;
+                    box-shadow: 1px 1px 10px #154a77;
+                    color: @light-color;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    margin: 10px 0 5px;
+                    color: @dark-color;
+                }
+
+                p {
+                    font-size: @font-size-medium;
+                    color: @dark-color;
+                    margin: 0;
+                }
+
+                a {
+                    color: @primary-color;
+                    text-decoration: none;
+                    font-weight: @font-weight-bold;
+                }
+            }
+        }
+    }
+}
+
+// Sección de Paquetes de Vuelo
+.paquete {
+    padding-block: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: @light-color; 
+
+    .container {
+        .H3Paquete {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: @primary-color;
+        }
+
+        .info {
+            font-size: 15px;
+            margin-top: 10px;
+            font-weight: @font-weight-normal;
+            margin-bottom: 50px;
+            color: @dark-color;
+        }
+
+        .lista_paquetes {
+            display: flex;
+            flex-direction: column; 
+            gap: 20px; 
+            list-style: none;
+            padding: 0;
+        
+            > li {
+                display: flex;
+                flex-direction: column; 
+                gap: 20px;
+                background-color: @white-color;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                flex: 1 0 100%;
+
+                @media(min-width: #breaks[desktop]){
+                    flex-direction: row;
+                }
+        
+                .paquete-card {
+                    flex: 1;
+        
+                    .paqueteIMG img {
+                        order: 1;
+                        border-radius: 10px;
+                        width: 300px;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                }
+        
+                .card_content {
+                    flex: 2;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding-right: 20px;
+        
+                    h3 {
+                        font-size: 20px;
+                        color: @primary-color;
+                    }
+        
+                    p {
+                        color: @dark-color;
+                        order: 2;
+                        margin-top: 10px;
+                        line-height: 1.6;
+                        font-size: @font-size-small;
+                    }
+                }
+        
+                .precio {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    background-color: @primary-color;
+                    color: @light-color;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    order: 3;
+                    margin-top: 10px;
+        
+                    .fondo-precio {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+        
+                        p {
+                            font-size: @font-size-small;
+                        }
+        
+                        .card_rating {
+                            font-size: @font-size-small;
+                            color: @light-color;
+                        }
+                    }
+        
+                    p {
+                        font-size: 26px;
+                        font-weight: @font-weight-bold;
+                        line-height: 1.2;
+                        text-align: center;
+        
+                        span {
+                            font-size: @font-size-small;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .boton {
+            display: flex;
+            align-self: center;
+            padding: @spacing-md @spacing-xl;
+            background-color: @secondary-color;
+            color: @white-color;
+            text-decoration: none;
+            margin: @spacing-sm auto;
+            box-shadow: 3px 3px 5px #000;
+            border-radius: 48px;
+            font-family: @font-family-base;
+            margin-top: 3%;
+
+            &:hover {
+                background-color: @accent-color;
+            }
+        }
+    }
+}

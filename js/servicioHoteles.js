@@ -5,6 +5,11 @@ class SliderController {
         this.currentSlideIndex = 1;
         this.timeInterval = 4000;
 
+        if (this.slides.length === 0) {
+            console.error("No slides found.");
+            return;
+        }
+
         this.cloneSlides();
         this.framestrack.style.width = `${this.slides.length * 100}%`;
         this.updateSlider(false);
@@ -81,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new SliderController();
 });
 
+// Controlador de tarjetas
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.card');
 
@@ -91,6 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let currentSlide = 0;
         const totalSlides = sliderTrack.children.length;
+
+        if (totalSlides === 0) {
+            console.error("No slides found in card.");
+            return;
+        }
 
         function moveSlide(index) {
             const slideWidth = sliderTrack.clientWidth;
@@ -109,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Validación del formulario
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('formHospedaje');
     const fechaIngreso = document.getElementById('fecha_ingreso');
