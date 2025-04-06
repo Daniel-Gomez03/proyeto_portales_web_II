@@ -1,4 +1,4 @@
-main {
+.about-page {
     background-color: @background-gray;
     color: @dark-color;
 
@@ -16,6 +16,10 @@ main {
 
         @media(min-width: #breaks[tablet]) {
             margin-bottom: -0.5rem;
+        }
+
+        @media(min-width: #breaks[desktop]) {
+            margin-bottom: 0.5rem;
         }
 
         picture {
@@ -46,6 +50,63 @@ main {
             @media(min-width: #breaks[tablet]) {
                 font-size: @font-size-xxlarge;
             }
+
+            @media(min-width: #breaks[desktop]) {
+                font-size: @font-size-xxxlarge;
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            }
+        }
+    }
+
+    section {
+        margin-bottom: 2rem;
+        padding: @spacing-md;
+        background-color: @white-color;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        @media(min-width: #breaks[tablet]) {
+            margin-bottom: 1rem;
+            padding: @spacing-xl;
+            max-width: 45%;
+            margin-left: auto;
+            margin-right: auto;
+            flex: 1 1 calc(50% - 1rem);
+        }
+
+        @media(min-width: #breaks[tablet]) {
+            max-width: 25%;
+            flex: 1 1 calc(33% - 5rem);
+        }
+
+        h2 {
+            font-size: @font-size-xlarge;
+            color: @primary-color;
+            text-align: center;
+
+            @media(min-width: #breaks[tablet]) {
+                margin-bottom: 0.5rem;
+                font-size: 1.8rem;
+            }
+
+            @media(min-width: #breaks[tablet]) {
+                font-size: @font-size-xxlarge;
+            }
+        }
+
+        p {
+            font-size: @font-size-medium;
+            line-height: @line-height-base;
+            text-align: justify;
+
+            @media(min-width: #breaks[tablet]) {
+                font-size: 1.1rem;
+                text-align: center;
+            }
+
+            @media(min-width: #breaks[tablet]) {
+                font-size: 1.2rem;
+            }
         }
     }
 
@@ -53,20 +114,20 @@ main {
         ul {
             list-style: none;
             padding: 0;
-        }
 
-        li {
-            font-size: @font-size-medium;
-            text-align: center;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid @border-color;
-
-            @media(min-width: #breaks[tablet]) {
+            li {
                 font-size: @font-size-medium;
-            }
+                text-align: center;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid @border-color;
 
-            &:last-child {
-                border-bottom: none;
+                @media(min-width: #breaks[tablet]) {
+                    font-size: 1.2rem;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
             }
         }
     }
