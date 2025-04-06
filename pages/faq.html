@@ -4,60 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../less/main.less"/>
-    <script src="js/menu-toggle.js"></script>
+    <link rel="stylesheet" href="../less/main.less" />
+    <script src="../js/menu-toggle.js"></script>
     <title>Preguntas Frecuentes</title>
 </head>
 
 <body>
-    <div id="loader">
-        <p class="company-name">
-            <span>T</span><span>e</span><span>c</span><span>n</span><span>i</span><span>t</span><span>o</span><span>u</span><span>r</span><span>s</span>
-        </p>
-        <div class="earth-container">
-            <img src="../imgs/icons/planeta-tierra.png" alt="Planeta Tierra" class="earth">
-            <div class="orbit">
-                <img src="../imgs/icons/avion.png" alt="avion" class="plane">
-            </div>
-        </div>
-    </div> 
-    <header>
-        <div class="brand">
-            <picture>
-                <source src="../imgs/logo/logo-Tecnitour(Desktop).png" media="(min-width: 1024px)">
-                <source src="../imgs/logo/Logo-Tecnitour(tablet).png" media="(min-width: 720px)">
-                <img src="../imgs/logo/Logo-Tecnitour(movil).png" alt="Logo de la empresa">
-            </picture>
-            <h1>Tecnitours</h1>
-        </div>
-        <button class="menu-toggle" aria-label="Abrir menu">
-            &#9776;
-        </button>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./about.html">Nosotros</a></li>
-                <li class="menuDesplegable">
-                    <button class="menubtn">Servicios</button>
-                    <div class="linksMenu">
-                        <a href="./servicioAutos.html">Autos</a>
-                        <a href="./servicioHoteles.html">Hoteles</a>
-                        <a href="./servicioVuelos.html">Vuelos</a>
-                        <a href="./servicioPaquetes.html">Paquetes</a>
-                    </div>
-                </li>
-                <li class="menuDesplegable">
-                    <button class="menubtn">Explorar</button>
-                    <div class="linksMenu">
-                        <a href="./galeria.html">Galería</a>
-                        <a href="./blog.html">Blog</a>
-                        <a href="./faq.html">FAQ</a>
-                    </div>
-                </li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    {{> loader}}
+
+    {{> header}}
 
     <main class="faq-page">
         <section class="hero">
@@ -71,11 +26,11 @@
                 <p>Todo lo que necesitas saber sobre nuestros servicios</p>
             </div>
         </section>
-    
+
         <section class="faq-contenedor">
             <section class="faq-seccion">
                 <h2 class="seccion-titulo">Sobre las Reservas</h2>
-                
+
                 <div class="faq-preguntas">
                     <details class="faq-item">
                         <summary>¿Cómo puedo hacer una reserva?</summary>
@@ -89,7 +44,7 @@
                             </ul>
                         </div>
                     </details>
-        
+
                     <details class="faq-item">
                         <summary>¿Con cuánta anticipación debo reservar?</summary>
                         <div class="faq-content">
@@ -103,10 +58,10 @@
                     </details>
                 </div>
             </section>
-        
+
             <section class="faq-seccion">
                 <h2 class="seccion-titulo">Pagos y Financiamiento</h2>
-                
+
                 <div class="faq-preguntas">
                     <details class="faq-item">
                         <summary>¿Qué métodos de pago aceptan?</summary>
@@ -120,7 +75,7 @@
                             </ul>
                         </div>
                     </details>
-        
+
                     <details class="faq-item">
                         <summary>¿Ofrecen planes de financiamiento?</summary>
                         <div class="faq-content">
@@ -134,10 +89,10 @@
                     </details>
                 </div>
             </section>
-        
+
             <section class="faq-seccion">
                 <h2 class="seccion-titulo">Nuestros Servicios</h2>
-                
+
                 <div class="faq-preguntas">
                     <details class="faq-item">
                         <summary>¿Qué servicios incluyen sus paquetes?</summary>
@@ -153,7 +108,7 @@
                             </ul>
                         </div>
                     </details>
-        
+
                     <details class="faq-item">
                         <summary>¿Organizan viajes personalizados?</summary>
                         <div class="faq-content">
@@ -168,10 +123,10 @@
                     </details>
                 </div>
             </section>
-        
+
             <section class="faq-seccion">
                 <h2 class="seccion-titulo">Documentación para Viajar</h2>
-                
+
                 <div class="faq-preguntas">
                     <details class="faq-item">
                         <summary>¿Qué documentos necesito para viajar?</summary>
@@ -185,7 +140,7 @@
                             </ul>
                         </div>
                     </details>
-        
+
                     <details class="faq-item">
                         <summary>¿Ayudan con los trámites de visa?</summary>
                         <div class="faq-content">
@@ -200,13 +155,14 @@
                     </details>
                 </div>
             </section>
-        
+
             <div class="ayuda-contacto">
                 <h2>¿Tienes más preguntas?</h2>
                 <p>Nuestro equipo está listo para resolver todas tus dudas</p>
-                <a href="./contacto.html" class="btnContacto" target="_blank">
+                <a href="../pages/contacto.html" class="btnContacto" target="_blank">
                     Contáctanos
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
@@ -215,22 +171,10 @@
         </section>
     </main>
 
-    <footer>
-        <span>&copy; Tecnitours S. de R.L. 2024</span>
-        <div class="redesSociales">
-            <a href="https://www.facebook.com/p/Tecnitours-100063662585869/" target="_blank" aria-label="Facebook">
-                <img src="../imgs/icons/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/tecnitours?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank" aria-label="Instagram">
-                <img src="../imgs/icons/instagram.png" alt="Instagram">
-            </a>
-        </div>
-    </footer>
-
+    {{> footer}}
 
 </body>
 
-<script src="../js/loader.js"></script> 
+<script src="../js/loader.js"></script>
 
 </html>

@@ -1,1 +1,0 @@
-Aqui se pondra los parciales necesarios
