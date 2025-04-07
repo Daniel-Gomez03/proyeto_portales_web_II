@@ -1,0 +1,21 @@
+<section class="blog">
+    {{#each articulos}}
+    <article class="blog-post">
+        <div class="post-image">
+            <picture>
+                <source srcset="{{this.imagen.desktop}}" media="(min-width: 1024px)">
+                <source srcset="{{this.imagen.tablet}}" media="(min-width: 720px)">
+                <img src="{{this.imagen.mobile}}" alt="{{this.imagen.altText}}">
+            </picture>
+        </div>
+        <div class="post-contenido">
+            <div class="post-data">
+                <span class="post-categoria">{{this.categoria}}</span>
+                <span class="post-fecha">{{this.fecha}}</span>
+            </div>
+            <h3 class="post-titulo">{{this.titulo}}</h3>
+            <p class="post-descripcion">{{this.descripcion}}</p>
+        </div>
+    </article>
+    {{/each}}
+</section>

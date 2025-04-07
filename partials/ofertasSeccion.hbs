@@ -1,0 +1,15 @@
+<section class="ofertas-destacadas">
+    <h2>{{ofertas.titulo}}</h2>
+    <div class="ofertas">
+        {{#each ofertas.items}}
+        <div class="oferta">
+            <img src="{{this.imagen}}" alt="{{this.alt}}">
+            <div class="info">
+                <h3>{{this.titulo}}</h3>
+                <p>{{this.descripcion}}</p>
+                <a href="{{this.url}}" class="btn">{{this.btnTexto}}</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>

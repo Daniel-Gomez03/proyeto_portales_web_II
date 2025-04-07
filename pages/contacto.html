@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../less/main.less" />
-    <script src="/js/menu-toggle.js"></script>
-    <script defer src="/js/form_validation.js"></script>
-    <title>Contacto</title>
+    <script src="../public/js/menu-toggle.js"></script>
+    <script defer src="../public/js/form_validation.js"></script>
+    <title>{{contacto.title}}</title>
 </head>
 
 <body>
@@ -17,6 +17,64 @@
 
     <main class="contact-page">
         <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source srcset="{{contacto.heroPanel.desktop}}" media="(min-width: 1024px)">
+                <source srcset="{{contacto.heroPanel.tablet}}" media="(min-width: 720px)">
+                <img src="{{contacto.heroPanel.mobile}}" alt="{{contacto.heroPanel.altText}}">
+            </picture>
+            <div class="hero-content">
+                <h2>{{contacto.titulo}}</h2>
+                <p>{{contacto.subtitulo}}</p>
+            </div>
+        </section>
+
+        <section class="content-container">
+            <!-- Información de contacto y mapa -->
+            <div class="contact-info-wrapper">
+                {{> contactoInfo info=contacto.informacion}}
+
+                <div class="mapa">
+                    <iframe
+                        src="{{contacto.mapa.url}}"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <section class="contact-form">
+                {{> contactoForm form=contacto.formulario}}
+            </section>
+
+        </section>
+    </main>
+
+    {{> footer}}
+</body>
+
+<script src="../public/js/loader.js"></script>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../less/main.less" />
+    <script src="../public/js/menu-toggle.js"></script>
+    <script defer src="../public/js/form_validation.js"></script>
+    <title>Contacto</title>
+</head>
+
+<body>
+    {{> loader}}
+
+    {{> header}}
+
+    <main class="contact-page">
         <section class="hero">
             <picture>
                 <source srcset="/imgs/heroPanel/contact-hero.jpg" media="(min-width: 1024px)">
@@ -30,7 +88,6 @@
         </section>
 
         <section class="content-container">
-            <!-- Información de contacto y mapa -->
             <div class="contact-info-wrapper">
                 <div class="contact-info">
                     <h3>Información de Contacto</h3>
@@ -85,7 +142,6 @@
                 </div>
             </div>
 
-            <!-- Formulario de contacto -->
             <section class="contact-form">
                 <div class="formulario">
                     <h2>¿Cómo podemos ayudarte?</h2>
@@ -151,6 +207,6 @@
     {{> footer}}
 </body>
 
-<script src="/js/loader.js"></script>
+<script src="../public/js/loader.js"></script>
 
-</html>
+</html> -->

@@ -1,0 +1,19 @@
+<section class="faq-seccion">
+    <h2 class="seccion-titulo">{{seccion.titulo}}</h2>
+
+    <div class="faq-preguntas">
+        {{#each seccion.preguntas}}
+        <details class="faq-item">
+            <summary>{{this.pregunta}}</summary>
+            <div class="faq-content">
+                <p>{{this.introduccion}}</p>
+                <ul>
+                    {{#each this.puntos}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </details>
+        {{/each}}
+    </div>
+</section>
