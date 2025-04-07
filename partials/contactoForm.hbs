@@ -1,0 +1,36 @@
+<div class="formulario">
+    <h2>{{form.titulo}}</h2>
+    <p class="form-subtitulo">{{form.subtitulo}}</p>
+    <form class="contact" method="GET">
+        <div class="form-group">
+            {{#each form.campos}}
+                <div class="input-control">
+                    <label for="{{this.id}}">{{this.etiqueta}}</label>
+                    
+                    {{#if (eq this.tipo "textarea")}}
+                        <textarea id="{{this.id}}" name="{{this.nombre}}" placeholder="{{this.placeholder}}"></textarea>
+                    {{else if (eq this.tipo "select")}}
+                        <select id="{{this.id}}" name="{{this.nombre}}">
+                            {{#each this.opciones}}
+                                <option value="{{this.valor}}">{{this.texto}}</option>
+                            {{/each}}
+                        </select>
+                    {{else}}
+                        <input id="{{this.id}}" name="{{this.nombre}}" type="{{this.tipo}}" placeholder="{{this.placeholder}}">
+                    {{/if}}
+                    
+                    <span class="error"></span>
+                </div>
+            {{/each}}
+        </div>
+        <button type="submit" class="submit-button">
+            <span>{{form.botonEnviar}}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+        </button>
+    </form>
+</div>

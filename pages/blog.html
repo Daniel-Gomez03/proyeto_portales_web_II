@@ -5,7 +5,77 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../less/main.less" />
-    <script src="/js/menu-toggle.js"></script>
+    <script src="../public/js/menu-toggle.js"></script>
+    <title>{{blog.title}}</title>
+</head>
+
+<body>
+    {{> loader}}
+
+    {{> header}}
+    <main class="blog-page">
+        <section class="hero">
+            <picture>
+                <source srcset="{{blog.heroPanel.desktop}}" media="(min-width: 1024px)">
+                <source srcset="{{blog.heroPanel.tablet}}" media="(min-width: 720px)">
+                <img src="{{blog.heroPanel.mobile}}" alt="{{blog.heroPanel.altText}}">
+            </picture>
+            <div class="hero-content">
+                <h2 id="blog-hero">{{blog.titulo}}</h2>
+                <p>{{blog.subtitulo}}</p>
+            </div>
+        </section>
+
+        <section class="blog-contenedor">
+            <div class="blog-estructura">
+                {{> contenedorBlog articulos=blog.articulos}}
+
+                <aside class="blog-sidebar">
+                    <div class="sidebar-categorias">
+                        <h3 class="categoria-titulo">{{blog.sidebar.categorias.titulo}}</h3>
+                        <div class="etiquetas">
+                            {{#each blog.sidebar.categorias.etiquetas}}
+                            <a href="./pages/blog.html#blog-hero" class="tag">{{this}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+
+                    <div class="sidebar-entradas-recientes">
+                        <h3 class="entradas-titulo">{{blog.sidebar.entradasRecientes.titulo}}</h3>
+                        <ul>
+                            {{#each blog.sidebar.entradasRecientes.entradas}}
+                            <li><a href="./pages/blog.html#blog-hero">{{this}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-redes-sociales">
+                        <h3 class="redes-titulo">{{blog.sidebar.redesSociales.titulo}}</h3>
+                        <div class="iconos-redes">
+                            {{#each blog.sidebar.redesSociales.redes}}
+                            <a href="{{this.url}}" target="_blank" class="red-social">{{this.nombre}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    {{> footer}}
+</body>
+
+<script src="../public/js/loader.js"></script>
+
+</html>
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../less/main.less" />
+    <script src="../public/js/menu-toggle.js"></script>
     <title>Blog</title>
 </head>
 
@@ -145,6 +215,6 @@
     {{> footer}}
 </body>
 
-<script src="/js/loader.js"></script>
+<script src="../public/js/loader.js"></script>
 
-</html>
+</html> -->

@@ -1,9 +1,9 @@
 <header>
     <div class="brand">
         <picture>
-            <source src="/imgs/logo/logo-Tecnitour(Desktop).png" media="(min-width: 1024px)">
-            <source src="/imgs/logo/Logo-Tecnitour(tablet).png" media="(min-width: 720px)">
-            <img src="/imgs/logo/Logo-Tecnitour(movil).png" alt="Logo de la empresa">
+            <source src="../public/imgs/logo/logo-Tecnitour(Desktop).png" media="(min-width: 1024px)">
+            <source src="../public/imgs/logo/Logo-Tecnitour(tablet).png" media="(min-width: 720px)">
+            <img src="../public/imgs/logo/Logo-Tecnitour(movil).png" alt="Logo de la empresa">
         </picture>
         <h1>Tecnitours</h1>
     </div>
@@ -12,26 +12,20 @@
     </button>
     <nav>
         <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/pages/about.html">Nosotros</a></li>
-            <li class="menuDesplegable">
-                <button class="menubtn">Servicios</button>
-                <div class="linksMenu">
-                    <a href="/pages/servicioAutos.html">Autos</a>
-                    <a href="/pages/servicioHoteles.html">Hoteles</a>
-                    <a href="/pages/servicioVuelos.html">Vuelos</a>
-                    <a href="/pages/servicioPaquetes.html">Paquetes</a>
-                </div>
-            </li>
-            <li class="menuDesplegable">
-                <button class="menubtn">Explorar</button>
-                <div class="linksMenu">
-                    <a href="/pages/galeria.html">Galería</a>
-                    <a href="/pages/blog.html">Blog</a>
-                    <a href="/pages/faq.html">FAQ</a>
-                </div>
-            </li>
-            <li><a href="/pages/contacto.html">Contacto</a></li>
+            {{#each navigation}}
+                {{#if submenu}}
+                    <li class="menuDesplegable">
+                        <button class="menubtn">{{label}}</button>
+                        <div class="linksMenu">
+                            {{#each submenu}}
+                                <a href="{{url}}">{{label}}</a>
+                            {{/each}}
+                        </div>
+                    </li>
+                {{else}}
+                    <li><a href="{{url}}">{{label}}</a></li>
+                {{/if}}
+            {{/each}}
         </ul>
     </nav>
 </header>

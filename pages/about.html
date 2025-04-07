@@ -5,7 +5,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../less/main.less" />
-    <script src="/js/menu-toggle.js"></script>
+    <script src="../public/js/menu-toggle.js"></script>
+    <title>{{about.title}}</title>
+</head>
+
+<body>
+    {{> loader}}
+
+    {{> header}}
+
+    <main class="about-page">
+        <div class="image-container">
+            <picture>
+                <source srcset="{{about.heroPanel.desktop}}" media="(min-width: 1024px)">
+                <source srcset="{{about.heroPanel.tablet}}" media="(min-width: 720px)">
+                <img src="{{about.heroPanel.mobile}}" alt="{{about.heroPanel.altText}}">
+            </picture>
+            <div class="overlay-text">{{about.titulo}}</div>
+        </div>
+
+        <section id="descripcion">
+            <h2>Descripción de la Empresa</h2>
+            <p>{{about.descripcion}}</p>
+        </section>
+
+        <section id="historia">
+            <h2>{{about.historia.titulo}}</h2>
+            <p>{{about.historia.contenido}}</p>
+        </section>
+
+        <section id="mision">
+            <h2>{{about.mision.titulo}}</h2>
+            <p>{{about.mision.contenido}}</p>
+        </section>
+
+        <section id="vision">
+            <h2>{{about.vision.titulo}}</h2>
+            <p>{{about.vision.contenido}}</p>
+        </section>
+
+        <section id="valores">
+            <h2>{{about.valores.titulo}}</h2>
+            <ul>
+                {{#each about.valores.lista}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+
+    {{> footer}}
+</body>
+<script src="../public/js/loader.js"></script>
+
+</html>
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../less/main.less" />
+    <script src="../public/js/menu-toggle.js"></script>
     <title>Sobre Nosotros</title>
 </head>
 
@@ -17,9 +78,9 @@
     <main class="about-page">
         <div class="image-container">
             <picture>
-                <source srcset="/imgs/heroPanel/paisaje-1(Desktop).jpg" media="(min-width: 1024px)">
-                <source srcset="/imgs/heroPanel/paisaje-3(Tablets).jpg" media="(min-width: 720px)">
-                <img src="/imgs/heroPanel/paisaje-2(movil).jpg" alt="Paisaje">
+                <source srcset="../public/imgs/heroPanel/paisaje-1(Desktop).jpg" media="(min-width: 1024px)">
+                <source srcset="../public/imgs/heroPanel/paisaje-3(Tablets).jpg" media="(min-width: 720px)">
+                <img src="../public/imgs/heroPanel/paisaje-2(movil).jpg" alt="Paisaje">
             </picture>
             <div class="overlay-text">Acerca de Nosotros</div>
         </div>
@@ -83,6 +144,6 @@
 
     {{> footer}}
 </body>
-<script src="/js/loader.js"></script>
+<script src="../public/js/loader.js"></script>
 
-</html>
+</html> -->

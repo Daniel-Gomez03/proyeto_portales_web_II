@@ -1,0 +1,14 @@
+<section class="conoce-mas">
+    <h2>{{conoceMas.titulo}}</h2>
+    <p>{{conoceMas.descripcion}}</p>
+    <div class="imagenes-boton">
+        {{#each conoceMas.enlaces}}
+        <div class="imagen-boton">
+            <a href="{{this.url}}">
+                <img src="{{this.imagen}}" alt="{{this.alt}}">
+            </a>
+            <p>{{this.texto}}</p>
+        </div>
+        {{/each}}
+    </div>
+</section>

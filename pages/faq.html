@@ -5,7 +5,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../less/main.less" />
-    <script src="/js/menu-toggle.js"></script>
+    <script src="../public/js/menu-toggle.js"></script>
+    <title>{{faq.title}}</title>
+</head>
+
+<body>
+    {{> loader}}
+
+    {{> header}}
+
+    <main class="faq-page">
+        <section class="hero">
+            <picture>
+                <source srcset="{{faq.heroPanel.desktop}}" media="(min-width: 1024px)">
+                <source srcset="{{faq.heroPanel.tablet}}" media="(min-width: 720px)">
+                <img src="{{faq.heroPanel.mobile}}" alt="{{faq.heroPanel.altText}}">
+            </picture>
+            <div class="hero-content">
+                <h2>{{faq.titulo}}</h2>
+                <p>{{faq.subtitulo}}</p>
+            </div>
+        </section>
+
+        <section class="faq-contenedor">
+            {{#each faq.secciones}}
+                {{> faqSeccion seccion=this}}
+            {{/each}}
+
+            <div class="ayuda-contacto">
+                <h2>{{faq.ayudaContacto.titulo}}</h2>
+                <p>{{faq.ayudaContacto.subtitulo}}</p>
+                <a href="./contacto.html" class="btnContacto" target="_blank">
+                    {{faq.ayudaContacto.btnTexto}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    {{> footer}}
+
+</body>
+
+<script src="../public/js/loader.js"></script>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../less/main.less" />
+    <script src="../public/js/menu-toggle.js"></script>
     <title>Preguntas Frecuentes</title>
 </head>
 
@@ -175,6 +232,6 @@
 
 </body>
 
-<script src="/js/loader.js"></script>
+<script src="../public/js/loader.js"></script>
 
-</html>
+</html> -->

@@ -5,8 +5,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="less/main.less" />
-    <script src="/js/menu-toggle.js"></script>
-    <script src="/js/slider.js"></script>
+    <script src="../public/js/menu-toggle.js"></script>
+    <script src="../public/js/slider.js"></script>
+    <title>{{inicio.title}}</title>
+</head>
+
+<body>
+    {{> loader}}
+
+    {{> header}}
+
+    <main class="index-page">
+        <div class="image-container">
+            <picture>
+                <source srcset="{{inicio.heroPanel.desktop}}" media="(min-width: 1024px)">
+                <source srcset="{{inicio.heroPanel.tablet}}" media="(min-width: 720px)">
+                <img src="{{inicio.heroPanel.mobile}}" alt="{{inicio.heroPanel.altText}}">
+            </picture>
+            <div class="overlay-text">{{inicio.heroPanel.overlayText}}</div>
+        </div>
+        
+        {{> destinosSlider destinos=inicio.destinos}}
+        
+        {{> conoceMasSeccion conoceMas=inicio.conoceMas}}
+        
+        {{> ofertasSeccion ofertas=inicio.ofertas}}
+    </main>
+
+    {{> footer}}
+
+</body>
+<script src="../public/js/loader.js"></script>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="less/main.less" />
+    <script src="../public/js/menu-toggle.js"></script>
+    <script src="../public/js/slider.js"></script>
     <title>Tecnitours - Tu Agencia de Viajes en Honduras</title>
 </head>
 
@@ -18,9 +59,9 @@
     <main class="index-page">
         <div class="image-container">
             <picture>
-                <source srcset="/imgs/heroPanel/paisaje-1(Desktop).jpg" media="(min-width: 1024px)">
-                <source srcset="/imgs/heroPanel/paisaje-3(Tablets).jpg" media="(min-width: 720px)">
-                <img src="/imgs/heroPanel/paisaje-2(movil).jpg" alt="Paisaje">
+                <source srcset="../public/imgs/heroPanel/paisaje-1(Desktop).jpg" media="(min-width: 1024px)">
+                <source srcset="../public/imgs/heroPanel/paisaje-3(Tablets).jpg" media="(min-width: 720px)">
+                <img src="../public/imgs/heroPanel/paisaje-2(movil).jpg" alt="Paisaje">
             </picture>
             <div class="overlay-text">Un nuevo concepto en viajes</div>
         </div>
@@ -32,7 +73,7 @@
                 <div class="tarjetas">
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/machu picchu.jpg" alt="Machu Pichu">
+                            <img src="../public/imgs/paisajes/machu picchu.jpg" alt="Machu Pichu">
                         </div>
                         <div class="info">
                             <h3>Machu Picchu, Perú</h3>
@@ -43,7 +84,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/petra.jpg" alt="Petra">
+                            <img src="../public/imgs/paisajes/petra.jpg" alt="Petra">
                         </div>
                         <div class="info">
                             <h3>Petra, Jordania</h3>
@@ -52,7 +93,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/chichen itza.JPG" alt="Chichen Itza">
+                            <img src="../public/imgs/paisajes/chichen itza.JPG" alt="Chichen Itza">
                         </div>
                         <div class="info">
                             <h3>Chichen Itzá, México</h3>
@@ -63,7 +104,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/acropolis.jpg" alt="Acropolis">
+                            <img src="../public/imgs/paisajes/acropolis.jpg" alt="Acropolis">
                         </div>
                         <div class="info">
                             <h3>La Acrópolis, Grecia</h3>
@@ -73,7 +114,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/piramides giza.jpg" alt="Piramides de Giza">
+                            <img src="../public/imgs/paisajes/piramides giza.jpg" alt="Piramides de Giza">
                         </div>
                         <div class="info">
                             <h3>Las Pirámides de Giza, Egipto</h3>
@@ -83,7 +124,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/taj mahal.jpeg" alt="Taj Mahal">
+                            <img src="../public/imgs/paisajes/taj mahal.jpeg" alt="Taj Mahal">
                         </div>
                         <div class="info">
                             <h3>El Taj Mahal, India</h3>
@@ -94,7 +135,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/torre eiffel.jpg" alt="Torre Eiffel">
+                            <img src="../public/imgs/paisajes/torre eiffel.jpg" alt="Torre Eiffel">
                         </div>
                         <div class="info">
                             <h3>La Torre Eiffel, Francia</h3>
@@ -104,7 +145,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/la alhambra.jpg" alt="Alhambra">
+                            <img src="../public/imgs/paisajes/la alhambra.jpg" alt="Alhambra">
                         </div>
                         <div class="info">
                             <h3>La Alhambra, España</h3>
@@ -113,7 +154,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/coliseo.jpg" alt="Coliseo">
+                            <img src="../public/imgs/paisajes/coliseo.jpg" alt="Coliseo">
                         </div>
                         <div class="info">
                             <h3>Coliseo, Italia</h3>
@@ -123,7 +164,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/time square.jpg" alt="Times Square">
+                            <img src="../public/imgs/paisajes/time square.jpg" alt="Times Square">
                         </div>
                         <div class="info">
                             <h3>Times Square, Estados Unidos</h3>
@@ -132,7 +173,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/stonehenge.jpg" alt="Stonehenge">
+                            <img src="../public/imgs/paisajes/stonehenge.jpg" alt="Stonehenge">
                         </div>
                         <div class="info">
                             <h3>Stonehenge, Reino Unido</h3>
@@ -143,7 +184,7 @@
                     </div>
                     <div class="tarjeta">
                         <div class="imagen">
-                            <img src="/imgs/paisajes/cristo redentor.jpg" alt="Cristo Redentor">
+                            <img src="../public/imgs/paisajes/cristo redentor.jpg" alt="Cristo Redentor">
                         </div>
                         <div class="info">
                             <h3>Cristo Redentor, Brasil</h3>
@@ -161,19 +202,19 @@
             <div class="imagenes-boton">
                 <div class="imagen-boton">
                     <a href="/pages/about.html">
-                        <img src="/imgs/paisajes/nosotros.jpg" alt="Sobre Nosotros">
+                        <img src="../public/imgs/paisajes/nosotros.jpg" alt="Sobre Nosotros">
                     </a>
                     <p>Sobre Nosotros</p>
                 </div>
                 <div class="imagen-boton">
                     <a href="/pages/blog.html">
-                        <img src="/imgs/paisajes/blog.jpg" alt="Blog">
+                        <img src="../public/imgs/paisajes/blog.jpg" alt="Blog">
                     </a>
                     <p>Blog</p>
                 </div>
                 <div class="imagen-boton">
                     <a href="/pages/contacto.html">
-                        <img src="/imgs/paisajes/contacto.jpg" alt="Contacto">
+                        <img src="../public/imgs/paisajes/contacto.jpg" alt="Contacto">
                     </a>
                     <p>Contacto</p>
                 </div>
@@ -183,7 +224,7 @@
             <h2>Ofertas Destacadas</h2>
             <div class="ofertas">
                 <div class="oferta">
-                    <img src="/imgs/paisajes/cancun.jpg" alt="Cancún">
+                    <img src="../public/imgs/paisajes/cancun.jpg" alt="Cancún">
                     <div class="info">
                         <h3>Escapada de Lujo en Cancún</h3>
                         <p>Disfruta de una estancia de 5 noches en uno de los mejores resorts de Cancún. Incluye todo
@@ -193,7 +234,7 @@
                     </div>
                 </div>
                 <div class="oferta">
-                    <img src="/imgs/paisajes/avion.jpg" alt="Vuelo a Europa">
+                    <img src="../public/imgs/paisajes/avion.jpg" alt="Vuelo a Europa">
                     <div class="info">
                         <h3>Vuelos Directos a Europa</h3>
                         <p>Aprovecha esta oferta exclusiva para volar directo a Europa desde Tegucigalpa con tarifas
@@ -203,7 +244,7 @@
                     </div>
                 </div>
                 <div class="oferta">
-                    <img src="/imgs/paisajes/crucero.jpg" alt="Crucero por el Caribe">
+                    <img src="../public/imgs/paisajes/crucero.jpg" alt="Crucero por el Caribe">
                     <div class="info">
                         <h3>Crucero por el Caribe: 2x1 en boletos</h3>
                         <p>Vive la experiencia de un exclusivo crucero por el Caribe. Disfruta de 7 días a bordo de un
@@ -219,6 +260,6 @@
     {{> footer}}
 
 </body>
-<script src="/js/loader.js"></script>
+<script src="../public/js/loader.js"></script>
 
-</html>
+</html> -->
