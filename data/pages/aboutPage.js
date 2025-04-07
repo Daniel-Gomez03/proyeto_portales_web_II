@@ -4,9 +4,9 @@ export const aboutPage = {
         titulo: "Acerca de Nosotros",
         descripcion: "Tecnitours es una empresa que se enfoca en brindar asesoramiento y cotización para la planificación de viajes. Su enfoque principal es proporcionar soluciones a medida para sus clientes, garantizando experiencias de viaje satisfactorias y únicas. La empresa se dedica a ofrecer un servicio de excelencia que satisfaga las expectativas y requerimientos de cada cliente.",
         heroPanel: {
-            desktop: "../public/imgs/heroPanel/paisaje-1(Desktop).jpg",
-            tablet: "../public/imgs/heroPanel/paisaje-3(Tablets).jpg",
-            mobile: "../public/imgs/heroPanel/paisaje-2(movil).jpg",
+            desktop: "/imgs/heroPanel/paisaje-1(Desktop).jpg",
+            tablet: "/imgs/heroPanel/paisaje-3(Tablets).jpg",
+            mobile: "/imgs/heroPanel/paisaje-2(movil).jpg",
             altText: "Paisaje"
         },
         historia: {

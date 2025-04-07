@@ -4,9 +4,9 @@ export const faqPage = {
         titulo: "Preguntas Frecuentes",
         subtitulo: "Todo lo que necesitas saber sobre nuestros servicios",
         heroPanel: {
-            desktop: "../public/imgs/heroPanel/faq-hero.jpg",
-            tablet: "../public/imgs/heroPanel/faq-hero.jpg",
-            mobile: "../public/imgs/heroPanel/faq-hero.jpg",
+            desktop: "/imgs/heroPanel/faq-hero.jpg",
+            tablet: "/imgs/heroPanel/faq-hero.jpg",
+            mobile: "/imgs/heroPanel/faq-hero.jpg",
             altText: "Preguntas Frecuentes - Tecnitours"
         },
         secciones: [

@@ -4,17 +4,17 @@ export const blogPage = {
         titulo: "Blog de Viajes",
         subtitulo: "Descubre destinos, consejos y experiencias únicas",
         heroPanel: {
-            desktop: "../public/imgs/heroPanel/blog-hero.jpg",
-            tablet: "../public/imgs/heroPanel/blog-hero.jpg",
-            mobile: "../public/imgs/heroPanel/blog-hero.jpg",
+            desktop: "/imgs/heroPanel/blog-hero.jpg",
+            tablet: "/imgs/heroPanel/blog-hero.jpg",
+            mobile: "/imgs/heroPanel/blog-hero.jpg",
             altText: "Blog de Viajes - Tecnitours"
         },
         articulos: [
             {
                 imagen: {
-                    desktop: "../public/imgs/blog/articulo1.jpg",
-                    tablet: "../public/imgs/blog/articulo1.jpg",
-                    mobile: "../public/imgs/blog/articulo1.jpg",
+                    desktop: "/imgs/blog/articulo1.jpg",
+                    tablet: "/imgs/blog/articulo1.jpg",
+                    mobile: "/imgs/blog/articulo1.jpg",
                     altText: "Roatán: Un paraíso en el Caribe"
                 },
                 categoria: "Destinos",
@@ -24,9 +24,9 @@ export const blogPage = {
             },
             {
                 imagen: {
-                    desktop: "../public/imgs/blog/articulo2.jpg",
-                    tablet: "../public/imgs/blog/articulo2.jpg",
-                    mobile: "../public/imgs/blog/articulo2.jpg",
+                    desktop: "/imgs/blog/articulo2.jpg",
+                    tablet: "./imgs/blog/articulo2.jpg",
+                    mobile: "/imgs/blog/articulo2.jpg",
                     altText: "Copán Ruinas"
                 },
                 categoria: "Historia",
@@ -36,9 +36,9 @@ export const blogPage = {
             },
             {
                 imagen: {
-                    desktop: "../public/imgs/blog/articulo3.jpg",
-                    tablet: "../public/imgs/blog/articulo3.jpg",
-                    mobile: "../public/imgs/blog/articulo3.jpg",
+                    desktop: "/imgs/blog/articulo3.jpg",
+                    tablet: "/imgs/blog/articulo3.jpg",
+                    mobile: "/imgs/blog/articulo3.jpg",
                     altText: "Tips de Viaje"
                 },
                 categoria: "Consejos de Viaje",

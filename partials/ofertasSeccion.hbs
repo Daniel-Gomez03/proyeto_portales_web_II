@@ -2,14 +2,14 @@
     <h2>{{ofertas.titulo}}</h2>
     <div class="ofertas">
         {{#each ofertas.items}}
-        <div class="oferta">
-            <img src="{{this.imagen}}" alt="{{this.alt}}">
-            <div class="info">
-                <h3>{{this.titulo}}</h3>
-                <p>{{this.descripcion}}</p>
-                <a href="{{this.url}}" class="btn">{{this.btnTexto}}</a>
+            <div class="oferta">
+                <img src="{{imagen}}" alt="{{titulo}}">
+                <div class="info">
+                    <h3>{{titulo}}</h3>
+                    <p>{{descripcion}}</p>
+                    <a href="{{url}}" class="btn">Ver más</a>
+                </div>
             </div>
-        </div>
         {{/each}}
     </div>
 </section>
