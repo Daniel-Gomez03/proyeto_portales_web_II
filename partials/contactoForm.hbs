@@ -3,25 +3,29 @@
     <p class="form-subtitulo">{{form.subtitulo}}</p>
     <form class="contact" method="GET">
         <div class="form-group">
-            {{#each form.campos}}
-                <div class="input-control">
-                    <label for="{{this.id}}">{{this.etiqueta}}</label>
-                    
-                    {{#if (eq this.tipo "textarea")}}
-                        <textarea id="{{this.id}}" name="{{this.nombre}}" placeholder="{{this.placeholder}}"></textarea>
-                    {{else if (eq this.tipo "select")}}
-                        <select id="{{this.id}}" name="{{this.nombre}}">
-                            {{#each this.opciones}}
-                                <option value="{{this.valor}}">{{this.texto}}</option>
-                            {{/each}}
-                        </select>
-                    {{else}}
-                        <input id="{{this.id}}" name="{{this.nombre}}" type="{{this.tipo}}" placeholder="{{this.placeholder}}">
-                    {{/if}}
-                    
-                    <span class="error"></span>
-                </div>
+            {{#each form.campos.inputs}}
+            <div class="input-control">
+                <label for="{{this.id}}">{{this.etiqueta}}</label>
+                <input id="{{this.id}}" name="{{this.nombre}}" type="{{this.tipo}}" placeholder="{{this.placeholder}}">
+                <span class="error"></span>
+            </div>
             {{/each}}
+
+            <div class="input-control">
+                <label for="{{form.campos.select.id}}">{{form.campos.select.etiqueta}}</label>
+                <select id="{{form.campos.select.id}}" name="{{form.campos.select.nombre}}">
+                    {{#each form.campos.select.opciones}}
+                    <option value="{{this.valor}}">{{this.texto}}</option>
+                    {{/each}}
+                </select>
+                <span class="error"></span>
+            </div>
+
+            <div class="input-control">
+                <label for="{{form.campos.textarea.id}}">{{form.campos.textarea.etiqueta}}</label>
+                <textarea id="{{form.campos.textarea.id}}" name="{{form.campos.textarea.nombre}}" placeholder="{{form.campos.textarea.placeholder}}"></textarea>
+                <span class="error"></span>
+            </div>
         </div>
         <button type="submit" class="submit-button">
             <span>{{form.botonEnviar}}</span>
