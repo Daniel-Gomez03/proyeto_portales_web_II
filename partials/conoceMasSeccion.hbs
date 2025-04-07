@@ -2,13 +2,13 @@
     <h2>{{conoceMas.titulo}}</h2>
     <p>{{conoceMas.descripcion}}</p>
     <div class="imagenes-boton">
-        {{#each conoceMas.enlaces}}
-        <div class="imagen-boton">
-            <a href="{{this.url}}">
-                <img src="{{this.imagen}}" alt="{{this.alt}}">
-            </a>
-            <p>{{this.texto}}</p>
-        </div>
+        {{#each conoceMas.secciones}}
+            <div class="imagen-boton">
+                <a href="{{url}}">
+                    <img src="{{imagen}}" alt="{{titulo}}">
+                </a>
+                <p>{{titulo}}</p>
+            </div>
         {{/each}}
     </div>
 </section>

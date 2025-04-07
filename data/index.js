@@ -13,8 +13,7 @@ const commonData = {
     navigation: [
         { url: '/index.html', label: 'Inicio' },
         { url: '/pages/about.html', label: 'Nosotros' },
-        { 
-            url: '#', 
+        {
             label: 'Servicios',
             submenu: [
                 { url: '/pages/servicioAutos.html', label: 'Autos' },
@@ -23,8 +22,7 @@ const commonData = {
                 { url: '/pages/servicioPaquetes.html', label: 'Paquetes' }
             ]
         },
-        { 
-            url: '#', 
+        {
             label: 'Explorar',
             submenu: [
                 { url: '/pages/galeria.html', label: 'Galería' },

@@ -4,9 +4,9 @@ export const contactoPage = {
         titulo: "¿Listo para tu próximo viaje?",
         subtitulo: "Contacta con nuestros asesores de viaje",
         heroPanel: {
-            desktop: "../public/imgs/heroPanel/contact-hero.jpg",
-            tablet: "../public/imgs/heroPanel/contact-hero.jpg",
-            mobile: "../public/imgs/heroPanel/contact-hero.jpg",
+            desktop: "/imgs/heroPanel/contact-hero.jpg",
+            tablet: "/imgs/heroPanel/contact-hero.jpg",
+            mobile: "/imgs/heroPanel/contact-hero.jpg",
             altText: "Contáctanos - Tecnitours"
         },
         informacion: {
@@ -76,7 +76,7 @@ export const contactoPage = {
                     id: "message",
                     nombre: "message",
                     etiqueta: "Detalles del viaje:",
-                    placeholder: "Cuéntanos los detalles de tu viaje ideal: destino, fechas tentativas, número de personas, preferencias.."
+                    placeholder: "Cuéntanos los detalles de tu viaje ideal: destino, fechas tentativas, número de personas, preferencias"
                 }
             },
             botonEnviar: "Enviar mensaje"

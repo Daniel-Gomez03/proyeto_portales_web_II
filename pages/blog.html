@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../less/main.less" />
-    <script src="../public/js/menu-toggle.js"></script>
+    <link rel="stylesheet" href="/less/main.less" />
+    <script src="/js/menu-toggle.js"></script>
     <title>{{blog.title}}</title>
 </head>
 
@@ -35,7 +35,7 @@
                         <h3 class="categoria-titulo">{{blog.sidebar.categorias.titulo}}</h3>
                         <div class="etiquetas">
                             {{#each blog.sidebar.categorias.etiquetas}}
-                            <a href="./pages/blog.html#blog-hero" class="tag">{{this}}</a>
+                            <a href="/pages/blog.html#blog-hero" class="tag">{{this}}</a>
                             {{/each}}
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <h3 class="entradas-titulo">{{blog.sidebar.entradasRecientes.titulo}}</h3>
                         <ul>
                             {{#each blog.sidebar.entradasRecientes.entradas}}
-                            <li><a href="./pages/blog.html#blog-hero">{{this}}</a></li>
+                            <li><a href="/pages/blog.html#blog-hero">{{this}}</a></li>
                             {{/each}}
                         </ul>
                     </div>
@@ -65,156 +65,6 @@
     {{> footer}}
 </body>
 
-<script src="../public/js/loader.js"></script>
+<script src="/js/loader.js"></script>
 
 </html>
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../less/main.less" />
-    <script src="../public/js/menu-toggle.js"></script>
-    <title>Blog</title>
-</head>
-
-<body>
-    {{> loader}}
-
-    {{> header}}
-    <main class="blog-page">
-        <section class="hero">
-            <picture>
-                <source srcset="/imgs/heroPanel/blog-hero.jpg" media="(min-width: 1024px)">
-                <source srcset="/imgs/heroPanel/blog-hero.jpg" media="(min-width: 720px)">
-                <img src="/imgs/heroPanel/blog-hero.jpg" alt="Blog de Viajes - Tecnitours">
-            </picture>
-            <div class="hero-content">
-                <h2 id="blog-hero">Blog de Viajes</h2>
-                <p>Descubre destinos, consejos y experiencias únicas</p>
-            </div>
-        </section>
-
-        <section class="blog-contenedor">
-            <div class="blog-estructura">
-                <section class="blog">
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <picture>
-                                <source srcset="/imgs/blog/articulo1.jpg" media="(min-width: 1024px)">
-                                <source srcset="/imgs/blog/articulo1.jpg" media="(min-width: 720px)">
-                                <img src="/imgs/blog/articulo1.jpg" alt="Roatán: Un paraíso en el Caribe">
-                            </picture>
-                        </div>
-                        <div class="post-contenido">
-                            <div class="post-data">
-                                <span class="post-categoria">Destinos</span>
-                                <span class="post-fecha">15 de Noviembre, 2024</span>
-                            </div>
-                            <h3 class="post-titulo">Roatán: Un paraíso en el Caribe</h3>
-                            <p class="post-descripcion">Descubre por qué Roatán es considerada una de las mejores islas
-                                del Caribe, con sus playas cristalinas de arena blanca, arrecifes de coral multicolores
-                                que albergan una biodiversidad marina única, y una rica cultura local que combina
-                                influencias garífunas, hondureñas y caribeñas. Esta joya tropical ofrece experiencias
-                                inolvidables para viajeros: desde buceo y snorkel en la segunda barrera de coral más
-                                grande del mundo, hasta paseos por pintorescos pueblos pesqueros como West End y West
-                                Bay, donde la hospitalidad de los locales se une a una gastronomía deliciosa que incluye
-                                mariscos frescos y platos tradicionales. La isla no solo impresiona por su belleza
-                                natural, sino también por su ambiente relajado y las múltiples actividades que ofrece a
-                                turistas que buscan aventura, descanso o inmersión cultural.</p>
-                        </div>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <picture>
-                                <source srcset="/imgs/blog/articulo2.jpg" media="(min-width: 1024px)">
-                                <source srcset="/imgs/blog/articulo2.jpg" media="(min-width: 720px)">
-                                <img src="/imgs/blog/articulo2.jpg" alt="copán Ruinas">
-                            </picture>
-                        </div>
-                        <div class="post-contenido">
-                            <div class="post-data">
-                                <span class="post-categoria">Historia</span>
-                                <span class="post-fecha">10 de Noviembre, 2024</span>
-                            </div>
-                            <h3 class="post-titulo">Guía Completa: Copán Ruinas</h3>
-                            <p class="post-descripcion">Explora la majestuosidad de Copán, un sitio arqueológico maya
-                                declarado Patrimonio de la Humanidad por la UNESCO, que te transportará a la rica
-                                civilización maya clásica. Ubicado en el occidente de Honduras, este impresionante
-                                complejo arqueológico es conocido por sus increíbles estelas esculpidas, jeroglíficos
-                                intrincados y monumentales estructuras que revelan la sofisticación astronómica,
-                                artística y política de esta antigua civilización. Los visitantes pueden recorrer el
-                                Acrópolis, admirar la famosa Escalinata Jeroglífica y sumergirse en un viaje histórico
-                                que combina arqueología, arte y misterio maya.</p>
-                        </div>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <picture>
-                                <source srcset="/imgs/blog/articulo3.jpg" media="(min-width: 1024px)">
-                                <source srcset="/imgs/blog/articulo3.jpg" media="(min-width: 720px)">
-                                <img src="/imgs/blog/articulo3.jpg" alt="Tips de Viaje">
-                            </picture>
-                        </div>
-                        <div class="post-contenido">
-                            <div class="post-data">
-                                <span class="post-categoria">Consejos de Viaje</span>
-                                <span class="post-fecha">5 de Noviembre, 2024</span>
-                            </div>
-                            <h3 class="post-titulo">10 Tips Imprescindibles para tu Viaje</h3>
-                            <p class="post-descripcion">Prepárate para tu próxima aventura con estos consejos prácticos
-                                que todo viajero experimentado debe conocer: desde la importancia de documentos
-                                actualizados y seguros de viaje, hasta técnicas de empaque inteligente, manejo de
-                                presupuesto y estrategias para una inmersión cultural auténtica. Aprende a moverte como
-                                un local, protegerte de imprevistos, comunicarte eficazmente, y disfrutar al máximo cada
-                                destino con seguridad, confianza y apertura a nuevas experiencias.</p>
-                        </div>
-                    </article>
-                </section>
-
-                <aside class="blog-sidebar">
-                    <div class="sidebar-categorias">
-                        <h3 class="categoria-titulo">Categorías</h3>
-                        <div class="etiquetas">
-                            <a href="./pages/blog.html#blog-hero" class="tag">Destinos</a>
-                            <a href="./pages/blog.html#blog-hero" class="tag">Consejos de Viaje</a>
-                            <a href="./pages/blog.html#blog-hero" class="tag">Gastronomía</a>
-                            <a href="./pages/blog.html#blog-hero" class="tag">Cultura</a>
-                            <a href="./pages/blog.html#blog-hero" class="tag">Aventura</a>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-entradas-recientes">
-                        <h3 class="entradas-titulo">Entradas Recientes</h3>
-                        <ul>
-                            <li><a href="./pages/blog.html#blog-hero">10 Destinos Imperdibles en 2024</a></li>
-                            <li><a href="./pages/blog.html#blog-hero">Consejos para Viajeros Mochileros</a></li>
-                            <li><a href="./pages/blog.html#blog-hero">La Mejor Gastronomía de Sudamérica</a></li>
-                            <li><a href="./pages/blog.html#blog-hero">Guía Definitiva de Viaje Económico</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="sidebar-redes-sociales">
-                        <h3 class="redes-titulo">Síguenos en nuestras Redes Sociales</h3>
-                        <div class="iconos-redes">
-                            <a href="https://www.instagram.com/tecnitours?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                                target="_blank" class="red-social">Instagram</a>
-                            <a href="https://www.facebook.com/p/Tecnitours-100063662585869/" target="_blank"
-                                class="red-social">Facebook</a>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-
-        </section>
-    </main>
-
-    {{> footer}}
-</body>
-
-<script src="../public/js/loader.js"></script>
-
-</html> -->

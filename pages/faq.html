@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../less/main.less" />
-    <script src="../public/js/menu-toggle.js"></script>
+    <link rel="stylesheet" href="/less/main.less" />
+    <script src="/js/menu-toggle.js"></script>
     <title>{{faq.title}}</title>
 </head>
 
@@ -35,7 +35,7 @@
             <div class="ayuda-contacto">
                 <h2>{{faq.ayudaContacto.titulo}}</h2>
                 <p>{{faq.ayudaContacto.subtitulo}}</p>
-                <a href="./contacto.html" class="btnContacto" target="_blank">
+                <a href="/pages/contacto.html" class="btnContacto" target="_blank">
                     {{faq.ayudaContacto.btnTexto}}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -51,187 +51,6 @@
 
 </body>
 
-<script src="../public/js/loader.js"></script>
+<script src="/js/loader.js"></script>
 
 </html>
-
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../less/main.less" />
-    <script src="../public/js/menu-toggle.js"></script>
-    <title>Preguntas Frecuentes</title>
-</head>
-
-<body>
-    {{> loader}}
-
-    {{> header}}
-
-    <main class="faq-page">
-        <section class="hero">
-            <picture>
-                <source srcset="/imgs/heroPanel/faq-hero.jpg" media="(min-width: 1024px)">
-                <source srcset="/imgs/heroPanel/faq-hero.jpg" media="(min-width: 720px)">
-                <img src="/imgs/heroPanel/faq-hero.jpg" alt="Preguntas Frecuentes - Tecnitours">
-            </picture>
-            <div class="hero-content">
-                <h2>Preguntas Frecuentes</h2>
-                <p>Todo lo que necesitas saber sobre nuestros servicios</p>
-            </div>
-        </section>
-
-        <section class="faq-contenedor">
-            <section class="faq-seccion">
-                <h2 class="seccion-titulo">Sobre las Reservas</h2>
-
-                <div class="faq-preguntas">
-                    <details class="faq-item">
-                        <summary>¿Cómo puedo hacer una reserva?</summary>
-                        <div class="faq-content">
-                            <p>Puedes realizar tu reserva de varias formas:</p>
-                            <ul>
-                                <li>Llamando a nuestros teléfonos: (+504) 2239-3157/56</li>
-                                <li>Por WhatsApp al 9954-8435</li>
-                                <li>Visitando nuestra oficina en Boulevard Suyapa</li>
-                                <li>A través de nuestro formulario de contacto en línea</li>
-                            </ul>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>¿Con cuánta anticipación debo reservar?</summary>
-                        <div class="faq-content">
-                            <p>Recomendamos realizar tu reserva con al menos:</p>
-                            <ul>
-                                <li>Viajes nacionales: 2 semanas de anticipación</li>
-                                <li>Viajes internacionales: 1-2 meses de anticipación</li>
-                                <li>Temporada alta: 3-4 meses de anticipación</li>
-                            </ul>
-                        </div>
-                    </details>
-                </div>
-            </section>
-
-            <section class="faq-seccion">
-                <h2 class="seccion-titulo">Pagos y Financiamiento</h2>
-
-                <div class="faq-preguntas">
-                    <details class="faq-item">
-                        <summary>¿Qué métodos de pago aceptan?</summary>
-                        <div class="faq-content">
-                            <p>Aceptamos diversos métodos de pago:</p>
-                            <ul>
-                                <li>Tarjetas de crédito y débito</li>
-                                <li>Transferencias bancarias</li>
-                                <li>Efectivo en nuestra oficina</li>
-                                <li>Pagos en línea seguros</li>
-                            </ul>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>¿Ofrecen planes de financiamiento?</summary>
-                        <div class="faq-content">
-                            <p>Sí, contamos con diferentes opciones:</p>
-                            <ul>
-                                <li>Pago en cuotas con tarjetas participantes</li>
-                                <li>Reserva con un anticipo del 30%</li>
-                                <li>Planes personalizados según el destino</li>
-                            </ul>
-                        </div>
-                    </details>
-                </div>
-            </section>
-
-            <section class="faq-seccion">
-                <h2 class="seccion-titulo">Nuestros Servicios</h2>
-
-                <div class="faq-preguntas">
-                    <details class="faq-item">
-                        <summary>¿Qué servicios incluyen sus paquetes?</summary>
-                        <div class="faq-content">
-                            <p>Nuestros paquetes pueden incluir:</p>
-                            <ul>
-                                <li>Boletos aéreos</li>
-                                <li>Hospedaje en hoteles seleccionados</li>
-                                <li>Traslados aeropuerto-hotel</li>
-                                <li>Tours y excursiones</li>
-                                <li>Seguro de viaje</li>
-                                <li>Asesoría personalizada</li>
-                            </ul>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>¿Organizan viajes personalizados?</summary>
-                        <div class="faq-content">
-                            <p>Sí, nos especializamos en crear itinerarios a medida según:</p>
-                            <ul>
-                                <li>Tus preferencias de destino</li>
-                                <li>Tu presupuesto</li>
-                                <li>Duración del viaje</li>
-                                <li>Actividades de interés</li>
-                            </ul>
-                        </div>
-                    </details>
-                </div>
-            </section>
-
-            <section class="faq-seccion">
-                <h2 class="seccion-titulo">Documentación para Viajar</h2>
-
-                <div class="faq-preguntas">
-                    <details class="faq-item">
-                        <summary>¿Qué documentos necesito para viajar?</summary>
-                        <div class="faq-content">
-                            <p>Los documentos básicos requeridos son:</p>
-                            <ul>
-                                <li>Pasaporte vigente (mínimo 6 meses)</li>
-                                <li>Visas según el país de destino</li>
-                                <li>Identificación oficial</li>
-                                <li>Certificados de vacunación (según destino)</li>
-                            </ul>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>¿Ayudan con los trámites de visa?</summary>
-                        <div class="faq-content">
-                            <p>Sí, te apoyamos con:</p>
-                            <ul>
-                                <li>Información actualizada de requisitos</li>
-                                <li>Orientación en el proceso</li>
-                                <li>Revisión de documentación</li>
-                                <li>Agenda de citas en embajadas</li>
-                            </ul>
-                        </div>
-                    </details>
-                </div>
-            </section>
-
-            <div class="ayuda-contacto">
-                <h2>¿Tienes más preguntas?</h2>
-                <p>Nuestro equipo está listo para resolver todas tus dudas</p>
-                <a href="./pages/contacto.html" class="btnContacto" target="_blank">
-                    Contáctanos
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    {{> footer}}
-
-</body>
-
-<script src="../public/js/loader.js"></script>
-
-</html> -->

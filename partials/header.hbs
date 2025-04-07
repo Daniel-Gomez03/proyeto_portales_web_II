@@ -1,9 +1,9 @@
 <header>
     <div class="brand">
         <picture>
-            <source src="../public/imgs/logo/logo-Tecnitour(Desktop).png" media="(min-width: 1024px)">
-            <source src="../public/imgs/logo/Logo-Tecnitour(tablet).png" media="(min-width: 720px)">
-            <img src="../public/imgs/logo/Logo-Tecnitour(movil).png" alt="Logo de la empresa">
+            <source src="/imgs/logo/logo-Tecnitour(Desktop).png" media="(min-width: 1024px)">
+            <source src="/imgs/logo/Logo-Tecnitour(tablet).png" media="(min-width: 720px)">
+            <img src="/imgs/logo/Logo-Tecnitour(movil).png" alt="Logo de la empresa">
         </picture>
         <h1>Tecnitours</h1>
     </div>
@@ -13,18 +13,18 @@
     <nav>
         <ul>
             {{#each navigation}}
-                {{#if submenu}}
-                    <li class="menuDesplegable">
+                <li {{#if submenu}}class="menuDesplegable"{{/if}}>
+                    {{#if submenu}}
                         <button class="menubtn">{{label}}</button>
                         <div class="linksMenu">
                             {{#each submenu}}
                                 <a href="{{url}}">{{label}}</a>
                             {{/each}}
                         </div>
-                    </li>
-                {{else}}
-                    <li><a href="{{url}}">{{label}}</a></li>
-                {{/if}}
+                    {{else}}
+                        <a href="{{url}}">{{label}}</a>
+                    {{/if}}
+                </li>
             {{/each}}
         </ul>
     </nav>
