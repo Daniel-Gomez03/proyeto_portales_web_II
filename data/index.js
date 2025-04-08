@@ -12,7 +12,7 @@ import { servicioPaquetesPage } from "./pages/servicioPaquetesPage";
 const commonData = {
     navigation: [
         { url: '/index.html', label: 'Inicio' },
-        { url: '/pages/about.html', label: 'Nosotros' },
+        { url: '/about.html', label: 'Nosotros' },//AQUI TOCO DANIEL
         {
             label: 'Servicios',
             submenu: [
@@ -40,7 +40,7 @@ export const getPageContext = (pagePath) => {
         case '/index.html':
             pageData = indexPage;
             break;
-        case '/pages/about.html':
+        case '/about.html'://AQUI TODO DANIEL
             pageData = aboutPage;
             break;
         case '/pages/contacto.html':
