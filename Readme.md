@@ -1,7 +1,7 @@
 # TECNITOURS - Sitio Web de Agencia de Viajes
 
 ## 🌐 Acceso al Sitio
-El sitio web está disponible en línea a través de GitHub Pages:
+El sitio web está disponible en línea a través de GitHub Pages: [https://daniel-gomez03.github.io/proyeto_portales_web_II/]
 
 ## Descripción
 TECNITOURS es un sitio web desarrollado para una agencia de viajes que ofrece asesoramiento y cotización para la planificación de viajes. El proyecto se enfoca en crear una presencia digital atractiva y funcional que permita a los clientes explorar destinos turísticos y conocer los servicios ofrecidos por la agencia.

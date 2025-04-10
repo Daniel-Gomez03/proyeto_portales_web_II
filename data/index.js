@@ -11,26 +11,26 @@ import { servicioPaquetesPage } from "./pages/servicioPaquetesPage";
 
 const commonData = {
     navigation: [
-        { url: '/index.html', label: 'Inicio' },
-        { url: '/about.html', label: 'Nosotros' },
+        { url: 'index.html', label: 'Inicio' },
+        { url: 'about.html', label: 'Nosotros' },
         {
             label: 'Servicios',
             submenu: [
-                { url: '/servicioAutos.html', label: 'Autos' },
-                { url: '/servicioHoteles.html', label: 'Hoteles' },
-                { url: '/servicioVuelos.html', label: 'Vuelos' },
-                { url: '/servicioPaquetes.html', label: 'Paquetes' }
+                { url: 'servicioAutos.html', label: 'Autos' },
+                { url: 'servicioHoteles.html', label: 'Hoteles' },
+                { url: 'servicioVuelos.html', label: 'Vuelos' },
+                { url: 'servicioPaquetes.html', label: 'Paquetes' }
             ]
         },
         {
             label: 'Explorar',
             submenu: [
-                { url: '/galeria.html', label: 'Galería' },
-                { url: '/blog.html', label: 'Blog' },
-                { url: '/faq.html', label: 'FAQ' }
+                { url: 'galeria.html', label: 'Galería' },
+                { url: 'blog.html', label: 'Blog' },
+                { url: 'faq.html', label: 'FAQ' }
             ]
         },
-        { url: '/contacto.html', label: 'Contacto' }
+        { url: 'contacto.html', label: 'Contacto' }
     ]
 }
 
