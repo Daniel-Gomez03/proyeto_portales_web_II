@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/less/main.less" />
-    <script src="/src/menu-toggle.js"></script>
+    <script src="/js/menu-toggle.js" type="module"></script>
     <title>{{blog.title}}</title>
 </head>
 
@@ -35,7 +35,7 @@
                         <h3 class="categoria-titulo">{{blog.sidebar.categorias.titulo}}</h3>
                         <div class="etiquetas">
                             {{#each blog.sidebar.categorias.etiquetas}}
-                            <a href="/pages/blog.html#blog-hero" class="tag">{{this}}</a>
+                            <a href="/blog.html#blog-hero" class="tag">{{this}}</a>
                             {{/each}}
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <h3 class="entradas-titulo">{{blog.sidebar.entradasRecientes.titulo}}</h3>
                         <ul>
                             {{#each blog.sidebar.entradasRecientes.entradas}}
-                            <li><a href="/pages/blog.html#blog-hero">{{this}}</a></li>
+                            <li><a href="/blog.html#blog-hero">{{this}}</a></li>
                             {{/each}}
                         </ul>
                     </div>
