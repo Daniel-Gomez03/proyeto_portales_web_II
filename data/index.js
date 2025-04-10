@@ -12,25 +12,25 @@ import { servicioPaquetesPage } from "./pages/servicioPaquetesPage";
 const commonData = {
     navigation: [
         { url: '/index.html', label: 'Inicio' },
-        { url: '/about.html', label: 'Nosotros' },//AQUI TOCO DANIEL
+        { url: '/about.html', label: 'Nosotros' },
         {
             label: 'Servicios',
             submenu: [
-                { url: '/pages/servicioAutos.html', label: 'Autos' },
-                { url: '/pages/servicioHoteles.html', label: 'Hoteles' },
-                { url: '/pages/servicioVuelos.html', label: 'Vuelos' },
-                { url: '/pages/servicioPaquetes.html', label: 'Paquetes' }
+                { url: '/servicioAutos.html', label: 'Autos' },
+                { url: '/servicioHoteles.html', label: 'Hoteles' },
+                { url: '/servicioVuelos.html', label: 'Vuelos' },
+                { url: '/servicioPaquetes.html', label: 'Paquetes' }
             ]
         },
         {
             label: 'Explorar',
             submenu: [
-                { url: '/pages/galeria.html', label: 'Galería' },
-                { url: '/pages/blog.html', label: 'Blog' },
-                { url: '/pages/faq.html', label: 'FAQ' }
+                { url: '/galeria.html', label: 'Galería' },
+                { url: '/blog.html', label: 'Blog' },
+                { url: '/faq.html', label: 'FAQ' }
             ]
         },
-        { url: '/pages/contacto.html', label: 'Contacto' }
+        { url: '/contacto.html', label: 'Contacto' }
     ]
 }
 
@@ -40,31 +40,31 @@ export const getPageContext = (pagePath) => {
         case '/index.html':
             pageData = indexPage;
             break;
-        case '/about.html'://AQUI TODO DANIEL
+        case '/about.html':
             pageData = aboutPage;
             break;
-        case '/pages/contacto.html':
+        case '/contacto.html':
             pageData = contactoPage;
             break;
-        case '/pages/galeria.html':
+        case '/galeria.html':
             pageData = galeriaPage;
             break;
-        case '/pages/blog.html':
+        case '/blog.html':
             pageData = blogPage;
             break;
-        case '/pages/faq.html':
+        case '/faq.html':
             pageData = faqPage;
             break;
-        case '/pages/servicioAutos.html':
+        case '/servicioAutos.html':
             pageData = servicioAutosPage;
             break;
-        case '/pages/servicioHoteles.html':
+        case '/servicioHoteles.html':
             pageData = servicioHotelesPage;
             break;
-        case '/pages/servicioVuelos.html':
+        case '/servicioVuelos.html':
             pageData = servicioVuelosPage;
             break;
-        case '/pages/servicioPaquetes.html':
+        case '/servicioPaquetes.html':
             pageData = servicioPaquetesPage;
             break;
         default:
