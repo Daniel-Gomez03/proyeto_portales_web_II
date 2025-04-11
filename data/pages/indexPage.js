@@ -80,17 +80,17 @@ export const indexPage = {
                 {
                     imagen: "/imgs/paisajes/nosotros.jpg",
                     titulo: "Sobre Nosotros",
-                    url: "/about.html"
+                    url: "about.html"
                 },
                 {
                     imagen: "/imgs/paisajes/blog.jpg",
                     titulo: "Blog",
-                    url: "/blog.html"
+                    url: "blog.html"
                 },
                 {
                     imagen: "/imgs/paisajes/contacto.jpg",
                     titulo: "Contacto",
-                    url: "/contacto.html"
+                    url: "contacto.html"
                 }
             ]
         },
@@ -101,19 +101,19 @@ export const indexPage = {
                     imagen: "/imgs/paisajes/cancun.jpg",
                     titulo: "Escapada de Lujo en Cancún",
                     descripcion: "Disfruta de una estancia de 5 noches en uno de los mejores resorts de Cancún. Incluye todo incluido: alimentos, bebidas y acceso a las mejores actividades de playa y entretenimiento nocturno. ¡Perfecto para una escapada romántica o en familia!",
-                    url: "/servicioHoteles.html"
+                    url: "servicioHoteles.html"
                 },
                 {
                     imagen: "/imgs/paisajes/avion.jpg",
                     titulo: "Vuelos Directos a Europa",
                     descripcion: "Aprovecha esta oferta exclusiva para volar directo a Europa desde Tegucigalpa con tarifas especiales. Disfruta de una experiencia de vuelo cómoda y segura, ¡y comienza tu aventura por ciudades como Madrid, París y Roma!",
-                    url: "/servicioVuelos.html"
+                    url: "servicioVuelos.html"
                 },
                 {
                     imagen: "/imgs/paisajes/crucero.jpg",
                     titulo: "Crucero por el Caribe: 2x1 en boletos",
                     descripcion: "Vive la experiencia de un exclusivo crucero por el Caribe. Disfruta de 7 días a bordo de un lujoso barco, visitando destinos paradisíacos, con todo incluido: entretenimiento, restaurantes y actividades para todos los gustos.",
-                    url: "/servicioPaquetes.html"
+                    url: "servicioPaquetes.html"
                 }
             ]
         }
