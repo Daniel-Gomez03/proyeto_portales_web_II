@@ -1,0 +1,20 @@
+<ul class="Lista_destinos">
+    {{#each vuelos.recomendaciones}}
+    <li>
+        <div class="popular-card">
+            <figure class="card_img">
+                <img src="{{this.img}}" alt="{{this.altText}}" loading="{{this.loading}}">
+            </figure>
+            
+            <div class="card_content">
+                <div class="card_rating">{{this.rating}}</div>
+                <p>
+                    <a href="{{this.referencia}}">{{this.titulo}}</a>
+                </p>
+                <h3>{{this.subtitulo}}</h3>
+                <p class="card_text">{{this.descripcion}}</p>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>

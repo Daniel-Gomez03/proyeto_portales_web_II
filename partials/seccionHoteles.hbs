@@ -1,0 +1,19 @@
+<section class="popular-container">
+    <h2>Hoteles Populares</h2>
+    {{#each hoteles.recomendaciones}}
+    <div class="card">
+        <button class="btnIzquierda">‹</button>
+            <div class="slider-wrapper">
+                <div class="slider-track">
+                    <div class="hoteles slide"><img src="{{this.img1}}" alt="{{this.altText}}"></div>
+                    <div class="hoteles slide"><img src="{{this.img2}}" alt="{{this.altText}}"></div>
+                    <div class="hoteles slide"><img src="{{this.img3}}" alt="{{this.altText}}"></div>
+                </div>
+            </div>
+            <button class="btnDerecha">›</button>
+            <h3>{{this.titulo}}</h3>
+            <p>{{this.location}}</p>
+            <div class="precio">{{this.precio}}</div>
+    </div>
+     {{/each}}
+</section>

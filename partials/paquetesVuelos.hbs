@@ -1,0 +1,26 @@
+<ul class="lista_paquetes">
+    {{#each vuelos.paquetesLista}}
+    <li>
+        <div class="paquete-card">
+            <figure class="paqueteIMG">
+                <img src="{{this.img}}" alt="{{this.altText}}" loading="{{this.loading}}">
+            </figure>
+        </div>
+
+        <div class="card_content">
+            <h3>{{this.titulo}}</h3>
+            <p>{{this.descripcion}}</p>
+        </div>
+
+        <div class="precio">
+            <div class="fondo-precio">
+                <p>{{this.comments}}</p>
+                <div class="card_rating">{{this.rating}}</div>
+            </div>
+
+            <p>{{this.precio}}<span>{{this.span}}</span></p>
+            <button class="boton">{{this.boton}}</button>
+        </div>
+    </li>
+    {{/each}}
+</ul>

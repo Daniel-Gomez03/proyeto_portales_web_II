@@ -1,0 +1,12 @@
+<section class="main-slider">
+    <div class="framestrack">
+        {{#each hoteles.sliderHero}}
+        <div class="slide">
+            <img src="{{this.img}}" alt="{{this.altText}}">
+            <h1>{{this.titulo}}</h1>
+        </div>
+        {{/each}}
+    </div>
+    <button class="btnLeft">‹</button>
+    <button class="btnRight">›</button>
+</section>
