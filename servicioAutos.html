@@ -7,39 +7,39 @@
     <link rel="stylesheet" href="/less/main.less" />
     <script src="/src/menu-toggle.js" type="module"></script>
     <script src="/js/slider2.js"></script>
-    <title>Servicios Autos</title>
+    <title>{{title}}</title>
 </head>
 
 <body>
     {{> loader}}
-
     {{> header}}
 
     <main class="auto-page">
         <div class="slider">
             <div class="framestrack">
-                <div class="slide"><img src="/imgs/paisajes/cataratas.jpg" alt="Imagen 1"></div>
-                <div class="slide"><img src="/imgs/paisajes/nueva-york.jpg" alt="Imagen 2"></div>
-                <div class="slide"><img src="/imgs/paisajes/islas.jpg" alt="Imagen 3"></div>
+                {{#each slider.slides}}
+                <div class="slide">
+                    <img src="{{imageSrc}}" alt="{{alt}}">
+                </div>
+                {{/each}}
             </div>
         </div>
+
         <section class="description">
-            <h2>Alquila tu Auto con Nosotros</h2>
-            <p>Ofrecemos una amplia gama de vehículos adaptados a tus necesidades. Ya sea para viajes largos o traslados
-                cortos, contamos con opciones para todos los gustos y presupuestos.</p>
-            <p>Desde autos económicos hasta vehículos de lujo, ¡tenemos todo cubierto para que disfrutes de tu viaje con
-                total comodidad!</p>
+            <h2>{{description.title}}</h2>
+            {{#each description.paragraphs}}
+            <p>{{this}}</p>
+            {{/each}}
         </section>
 
         <section class="reservation-form">
-            <h2>Reserva tu Auto</h2>
+            <h2>{{reservation.title}}</h2>
             <form method="get">
                 <label for="car-type">Tipo de Vehículo:</label>
                 <select id="car-type" name="car-type">
-                    <option value="economy">Económico</option>
-                    <option value="luxury">De lujo</option>
-                    <option value="suv">SUV</option>
-                    <option value="convertible">Convertible</option>
+                    {{#each reservation.form.carTypes}}
+                    <option value="{{value}}">{{label}}</option>
+                    {{/each}}
                 </select>
 
                 <label for="pickup-date">Fecha de Recogida:</label>
@@ -51,20 +51,21 @@
                 <button type="submit">Reservar Ahora</button>
             </form>
         </section>
+
         <section class="benefits">
-            <h2>Beneficios de Alquilar con Nosotros</h2>
+            <h2>{{benefits.title}}</h2>
             <ul>
-                <li><strong>Variedad de Vehículos:</strong> Desde autos económicos hasta vehículos de lujo.</li>
-                <li><strong>Fácil Reserva:</strong> Reserva en línea de manera rápida y segura.</li>
-                <li><strong>Seguro Completo:</strong> Disfruta de un seguro completo durante tu alquiler.</li>
-                <li><strong>Atención al Cliente:</strong> Estamos disponibles para ayudarte 24/7.</li>
+                {{#each benefits.items}}
+                <li>
+                    <strong>{{title}}:</strong> {{description}}
+                </li>
+                {{/each}}
             </ul>
         </section>
     </main>
 
     {{> footer}}
+    <script src="/js/loader.js"></script>
 </body>
-
-<script src="/js/loader.js"></script>
 
 </html>

@@ -1,0 +1,13 @@
+<div class="card">
+    <img src="{{imagen}}" alt="{{alt}}">
+    <h3>{{titulo}}</h3>
+    <ul>
+        {{#each caracteristicas}}
+        <li>
+            {{#if subtitulo}}<strong>{{subtitulo}}</strong>{{/if}}
+            {{{detalle}}}
+        </li>
+        {{/each}}
+    </ul>
+    <a href="{{enlace}}" target="_blank">{{botonTexto}}</a>
+</div>
